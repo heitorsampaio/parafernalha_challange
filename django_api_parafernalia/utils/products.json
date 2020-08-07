@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "price": 1222,
+        "title": "Iphone",
+        "description": "Product 1",
+        "base_discount_percent": 15.0
+    },
+    {
+        "id": 2,
+        "price": 252525,
+        "title": "Rocket",
+        "description": "Product 2",
+        "base_discount_percent": 2.6
+    }
+]

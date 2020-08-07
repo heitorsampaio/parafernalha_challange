@@ -1,0 +1,17 @@
+[
+    {
+        "first_name": "Elon",
+        "last_name": "Musk",
+        "birthdate": "1996-05-15"
+    },
+    {
+        "first_name": "Bill",
+        "last_name": "Gates",
+        "birthdate": "1987-03-12"
+    },
+    {
+        "first_name": "Jeff",
+        "last_name": "Bezos",
+        "birthdate": "1999-08-10"
+    }
+]
