@@ -1,29 +1,19 @@
 
 import json
-import requests
-from requests import Request, Session
+from main.models import Users, Products
 
 
-def users():
-    with open('users.json', 'r') as users_file:
-        datas = json.load(users_file)
+with open('/home/pho3nix/Tools/parafernalia_challange/django_api_parafernalia/utils/users.json', 'r') as users:
+    data = json.load(users)
+for value in data:
+    users = Users(first_name=value['first_name'],
+                  last_name=value['last_name'], birthdate=value['birthdate'])
+    users.save()
 
-    for i in datas:
-        requests.post('http://127.0.0.1:8000/users/crud', data=i)
+with open('/home/pho3nix/Tools/parafernalia_challange/django_api_parafernalia/utils/products.json') as products:
+    data = json.load(products)
 
-    print('User data inserted')
-
-
-def products():
-    with open('products.json', 'r') as products_file:
-        datas = json.load(products_file)
-
-    for i in datas:
-        requests.post('http://127.0.0.1:8000/products/crud', data=i).json()
-
-    print('Products data inserted')
-
-
-if __name__ == "__main__":
-    users()
-    products()
+for value in data:
+    products = Products(price=value['price'], title=value['title'],
+                        description=value['description'], base_discount_percent=value['base_discount_percent'])
+    products.save()

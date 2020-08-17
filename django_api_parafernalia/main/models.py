@@ -1,5 +1,6 @@
 from django.db import models
 from .validators import validate_idade_minima
+from rest_framework.validators import UniqueValidator
 
 # Create your models here.
 
@@ -33,4 +34,4 @@ class Users(models.Model):
         db_table = 'users'
 
     def __str__(self):
-        return self.frist_name
+        return self.first_name
