@@ -12,4 +12,7 @@ Para rodar a API em NodeJS:
     npm install
     nodemon
 
+Para adicionar dados ao Bando de Dados mude para o diretório /django_api_parafernalia e rode:
+
+    bash db_insert.bash
 
